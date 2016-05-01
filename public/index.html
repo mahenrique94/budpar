@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="budpar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Budpar -  Orçamento para formaturas</title>
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="stylesheet/stilize/stilize.css" type="text/css">
+    <style>
+    div[id^=content-tab] {
+        display: inline-block !important;
+    }
+    .form-data-login {
+        padding: 1rem !important;
+    }
+    </style>
+</head>
+<body>
+    <main id="wrap role="main">
+        <section id="content">
+            <ng-view></ng-view>
+        </section>
+    </main>
+    <script src="js/jquery-2.1.4.min.js" type="text/javascript"></script>
+    <script src="js/angular/library/angular.min.js" type="text/javascript"></script>
+    <script src="js/angular/library/angular-animate.min.js" type="text/javascript"></script>
+    <script src="js/angular/library/angular-resource.min.js" type="text/javascript"></script>
+    <script src="js/angular/library/angular-route.min.js" type="text/javascript"></script>
+    <script src="js/angular/main.js" type="text/javascript"></script>
+    <script src="js/angular/controllers/budget-controller.js" type="text/javascript"></script>
+    <script src="js/angular/controllers/login-controller.js" type="text/javascript"></script>
+    <script src="js/angular/services/budget-service.js" type="text/javascript"></script>
+    <script src="js/angular/services/token-interceptor.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<div class="band-nav-derer">
+    <label>Orçamento</label>
+</div>
+<form class="form-modern" id="formbudget" name="formbudget" ng-submit="save();">
+    <ul aria-hasopopup="true" class="tab-responsive-default" ng-init="tab = 1">
+        <li aria-controls="content-tab1" aria-labelledby="tab1" aria-selected="false" ng-class="{'active' : tab == 1}" role="tab"><a id="tab1" ng-click="tab = 1" role="presentation"><i class="font-7x icon-graduation-cap"></i>&nbsp;Colação de Grau</a></li>					
+        <li aria-controls="content-tab2" aria-labelledby="tab2" aria-selected="false" ng-class="{'active' : tab == 2}" role="tab"><a id="tab2" ng-click="tab = 2" role="presentation"><i class="font-7x icon-graduation-cap"></i>&nbsp;Formatura</a></li>					
+        <li aria-controls="content-tab3" aria-labelledby="tab3" aria-selected="false" ng-class="{'active' : tab == 3}" role="tab"><a id="tab3" ng-click="tab = 3" role="presentation"><i class="font-7x icon-dollar"></i>&nbsp;Custos</a></li>					
+        <li aria-controls="content-tab4" aria-labelledby="tab4" aria-selected="false" ng-class="{'active' : tab == 4}" role="tab"><a id="tab4" ng-click="tab = 4" role="presentation"><i class="font-7x icon-gift"></i>&nbsp;Professores Homenageados</a></li>					
+    </ul>
+    <section class="no-border tab-group">
+        <div aria-expanded="false" aria-hidden="true" aria-labelledby="tab1" class="no-padding" id="content-tab1" ng-show="tab == 1" role="tabpanel">
+            <section class="form-body">
+                <div class="row" role="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" role="separator">
+                        <label>Razão Social</label>
+                        <input class="form-data" name="" ng-model="budget.degree.companyname" required type="text">
+                    </div>
+                </div>
+                <div class="row" role="row">
+                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" role="separator">
+                        <label>CEP</label>
+                        <input class="form-data" name="" ng-model="budget.degree.address.zipcode" required type="text">
+                    </div>
+                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" role="separator">
+                        <label>Rua</label>
+                        <input class="form-data" name="" ng-model="budget.degree.address.street" required type="text">
+                    </div>
+                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" role="separator">
+                        <label>Número</label>
+                        <input class="form-data" name="" ng-model="budget.degree.address.number" required type="text">
+                    </div>
+                </div>
+                <div class="row" role="row">
+                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" role="separator">
+                        <label>Bairro</label>
+                        <input class="form-data" name="" ng-model="budget.degree.address.district" required type="text">
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" role="separator">
+                        <label>Complemento</label>
+                        <input class="form-data" name="" ng-model="budget.degree.address.complement" type="text">
+                    </div>
+                </div>
+                <div class="row" role="row">
+                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" role="separator">
+                        <label>UF</label>
+                        <input class="form-data" name="" ng-model="budget.degree.address.state" required type="text">
+                    </div>
+                    <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10" role="separator">
+                        <label>Cidade</label>
+                        <input class="form-data" name="" ng-model="budget.degree.address.city" required type="text">
+                    </div>
+                </div>
+                <div class="row" role="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <label>País</label>
+                        <input class="form-data" name="" ng-model="budget.degree.address.country" required type="text">
+                    </div>
+                </div>
+                <div class="row" role="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <a class="btn-derer btn-sm float-right" ng-click="tab = 2" ng-show="budget._id == null">Próximo&nbsp;<i class="icon-right-circled"></i></a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div aria-expanded="false" aria-hidden="true" aria-labelledby="tab2" class="no-padding" id="content-tab2" ng-show="tab == 2" role="tabpanel">
+            <section class="form-body">
+                <div class="row" role="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" role="separator">
+                        <label>Razão Social</label>
+                        <input class="form-data" name="" ng-model="budget.graduation.companyname" required type="text">
+                    </div>
+                </div>
+                <div class="row" role="row">
+                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" role="separator">
+                        <label>CEP</label>
+                        <input class="form-data" name="" ng-model="budget.graduation.address.zipcode" required type="text">
+                    </div>
+                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" role="separator">
+                        <label>Rua</label>
+                        <input class="form-data" name="" ng-model="budget.graduation.address.street" required type="text">
+                    </div>
+                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" role="separator">
+                        <label>Número</label>
+                        <input class="form-data" name="" ng-model="budget.graduation.address.number" required type="text">
+                    </div>
+                </div>
+                <div class="row" role="row">
+                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" role="separator">
+                        <label>Bairro</label>
+                        <input class="form-data" name="" ng-model="budget.graduation.address.district" required type="text">
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" role="separator">
+                        <label>Complemento</label>
+                        <input class="form-data" name="" ng-model="budget.graduation.address.complement" type="text">
+                    </div>
+                </div>
+                <div class="row" role="row">
+                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" role="separator">
+                        <label>UF</label>
+                        <input class="form-data" name="" ng-model="budget.graduation.address.state" required type="text">
+                    </div>
+                    <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10" role="separator">
+                        <label>Cidade</label>
+                        <input class="form-data" name="" ng-model="budget.graduation.address.city" required type="text">
+                    </div>
+                </div>
+                <div class="row" role="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <label>País</label>
+                        <input class="form-data" name="" ng-model="budget.graduation.address.country" required type="text">
+                    </div>
+                </div>
+                <div class="row" role="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <a class="btn-derer btn-sm float-right" ng-click="tab = 3" ng-show="budget._id == null">Próximo&nbsp;<i class="icon-right-circled"></i></a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div aria-expanded="false" aria-hidden="true" aria-labelledby="tab3" class="no-padding" id="content-tab3" ng-show="tab == 3" role="tabpanel">
+            <section class="form-body">
+                <div class="row" role="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <input class="form-data" id="cost-name" placeholder="Descrição" type="text">
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <div class="form-data-group">
+                            <input class="form-data" id="cost-value" placeholder="Valor" type="text">
+                            <span class="form-data-group-btn"><button class="btn-default btn-sm" ng-click="spliceCosts();" type="button"><i class="icon-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <table class="table-default">
+                <thead>
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="cost in budget.costs">
+                        <td>{{cost.name}}</td>
+                        <td>{{cost.value}}</td>
+                        <td style="text-align: center; width: 80px;">
+                            <button class="btn-derer btn-xs" ng-click="spliceCosts(cost.name);" type="button"><i class="icon-trash"></i>&nbsp;Deletar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <section class="form-body">
+                <div class="row" role="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <a class="btn-derer btn-sm float-right" ng-click="tab = 4" ng-show="budget._id == null">Próximo&nbsp;<i class="icon-right-circled"></i></a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div aria-expanded="false" aria-hidden="true" aria-labelledby="tab4" class="no-padding" id="content-tab4" ng-show="tab == 4" role="tabpanel">
+            <section class="form-body">
+                <div class="row" role="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="form-data-group">
+                            <input class="form-data" id="teacher-name" placeholder="Valor" type="text">
+                            <span class="form-data-group-btn"><button class="btn-default btn-sm" ng-click="spliceTeachers();" type="button"><i class="icon-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <table class="table-default">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="teacher in budget.teachers">
+                        <td>{{teacher.name}}</td>
+                        <td style="text-align: center; width: 80px;">
+                            <button class="btn-derer btn-xs" ng-click="spliceTeachers(teacher.name);"><i class="icon-trash"></i>&nbsp;Deletar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</form>
+<nav class="nav-group nav-group-derer nax-fixed-bottom">
+    <ul>
+        <li><button form="formbudget" type="submit"><i class="icon-floppy"></i>&nbsp;Salvar</button></li>
+        <li><a href="#/budgets"><i class="icon-search"></i>&nbsp;Pesquisar</a></li>
+    </ul>
+    </ul>
+</nav>
+<script src="js/budpar.js" type="text/javascript"></script>

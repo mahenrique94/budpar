@@ -1,0 +1,30 @@
+{
+  "name": "budpar",
+  "version": "1.0.0",
+  "description": "Trabalho para faculdade, lançamento de orçamentos para formatura",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mahenrique94/budpar.git"
+  },
+  "author": "Matheus Castiglioni",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mahenrique94/budpar/issues"
+  },
+  "homepage": "https://github.com/mahenrique94/budpar#readme",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "consign": "^0.1.2",
+    "ejs": "^0.8.8",
+    "express": "^4.13.3",
+    "helmet": "^0.4.2",
+    "jsonwebtoken": "^5.4.1",
+    "method-override": "^2.1.3",
+    "mongo-sanitize": "^1.0.0",
+    "mongoose": "^4.3.1"
+  }
+}
