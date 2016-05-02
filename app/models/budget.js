@@ -90,7 +90,7 @@ module.exports = function() {
                 },
                 complement : {
                     maxlength : 30,
-                    required : true,
+                    required : false,
                     type : String,
                     uppercase : true
                 },
