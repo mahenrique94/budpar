@@ -1,7 +1,7 @@
 <div class="band-nav-derer">
     <label>Orçamento</label>
 </div>
-<form class="form-modern" id="formbudget" name="formbudget" ng-submit="save();">
+<form class="form-modern" id="formorcamento" name="formorcamento" ng-submit="save();">
     <ul aria-hasopopup="true" class="tab-responsive-default" ng-init="tab = 1">
         <li aria-controls="content-tab1" aria-labelledby="tab1" aria-selected="false" ng-class="{'active' : tab == 1}" role="tab"><a id="tab1" ng-click="tab = 1" role="presentation"><i class="font-7x icon-graduation-cap"></i>&nbsp;Colação de Grau</a></li>					
         <li aria-controls="content-tab2" aria-labelledby="tab2" aria-selected="false" ng-class="{'active' : tab == 2}" role="tab"><a id="tab2" ng-click="tab = 2" role="presentation"><i class="font-7x icon-graduation-cap"></i>&nbsp;Formatura</a></li>					
@@ -14,52 +14,52 @@
                 <div class="row" role="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" role="separator">
                         <label>Razão Social</label>
-                        <input class="form-data" name="" ng-model="budget.degree.companyname" required type="text">
+                        <input class="form-data" name="" ng-model="orcamento.colacao.empresa" required type="text">
                     </div>
                 </div>
                 <div class="row" role="row">
                     <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" role="separator">
                         <label>CEP</label>
-                        <input class="form-data" name="" ng-model="budget.degree.address.zipcode" required type="text">
+                        <input class="form-data" name="" ng-model="orcamento.colacao.endereco.cep" required type="text">
                     </div>
                     <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" role="separator">
                         <label>Rua</label>
-                        <input class="form-data" name="" ng-model="budget.degree.address.street" required type="text">
+                        <input class="form-data" name="" ng-model="orcamento.colacao.endereco.rua" required type="text">
                     </div>
                     <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" role="separator">
                         <label>Número</label>
-                        <input class="form-data" name="" ng-model="budget.degree.address.number" required type="text">
+                        <input class="form-data" name="" ng-model="orcamento.colacao.endereco.numero" required type="text">
                     </div>
                 </div>
                 <div class="row" role="row">
                     <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" role="separator">
                         <label>Bairro</label>
-                        <input class="form-data" name="" ng-model="budget.degree.address.district" required type="text">
+                        <input class="form-data" name="" ng-model="orcamento.colacao.endereco.bairro" required type="text">
                     </div>
                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" role="separator">
                         <label>Complemento</label>
-                        <input class="form-data" name="" ng-model="budget.degree.address.complement" type="text">
+                        <input class="form-data" name="" ng-model="orcamento.colacao.endereco.complemento" type="text">
                     </div>
                 </div>
                 <div class="row" role="row">
                     <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" role="separator">
                         <label>UF</label>
-                        <input class="form-data" name="" ng-model="budget.degree.address.state" required type="text">
+                        <input class="form-data" name="" ng-model="orcamento.colacao.endereco.estado" required type="text">
                     </div>
                     <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10" role="separator">
                         <label>Cidade</label>
-                        <input class="form-data" name="" ng-model="budget.degree.address.city" required type="text">
+                        <input class="form-data" name="" ng-model="orcamento.colacao.endereco.cidade" required type="text">
                     </div>
                 </div>
                 <div class="row" role="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <label>País</label>
-                        <input class="form-data" name="" ng-model="budget.degree.address.country" required type="text">
+                        <input class="form-data" name="" ng-model="orcamento.colacao.endereco.pais" required type="text">
                     </div>
                 </div>
                 <div class="row" role="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <a class="btn-derer btn-sm float-right" ng-click="tab = 2" ng-show="budget._id == null">Próximo&nbsp;<i class="icon-right-circled"></i></a>
+                        <a class="btn-derer btn-sm float-right" ng-click="tab = 2" ng-show="orcamento._id == null">Próximo&nbsp;<i class="icon-right-circled"></i></a>
                     </div>
                 </div>
             </section>
@@ -69,52 +69,52 @@
                 <div class="row" role="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" role="separator">
                         <label>Razão Social</label>
-                        <input class="form-data" name="" ng-model="budget.graduation.companyname" required type="text">
+                        <input class="form-data" name="" ng-model="orcamento.formatura.empresa" required type="text">
                     </div>
                 </div>
                 <div class="row" role="row">
                     <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" role="separator">
                         <label>CEP</label>
-                        <input class="form-data" name="" ng-model="budget.graduation.address.zipcode" required type="text">
+                        <input class="form-data" name="" ng-model="orcamento.formatura.endereco.cep" required type="text">
                     </div>
                     <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" role="separator">
                         <label>Rua</label>
-                        <input class="form-data" name="" ng-model="budget.graduation.address.street" required type="text">
+                        <input class="form-data" name="" ng-model="orcamento.formatura.endereco.rua" required type="text">
                     </div>
                     <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" role="separator">
                         <label>Número</label>
-                        <input class="form-data" name="" ng-model="budget.graduation.address.number" required type="text">
+                        <input class="form-data" name="" ng-model="orcamento.formatura.endereco.numero" required type="text">
                     </div>
                 </div>
                 <div class="row" role="row">
                     <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" role="separator">
                         <label>Bairro</label>
-                        <input class="form-data" name="" ng-model="budget.graduation.address.district" required type="text">
+                        <input class="form-data" name="" ng-model="orcamento.formatura.endereco.bairro" required type="text">
                     </div>
                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" role="separator">
                         <label>Complemento</label>
-                        <input class="form-data" name="" ng-model="budget.graduation.address.complement" type="text">
+                        <input class="form-data" name="" ng-model="orcamento.formatura.endereco.complemento" type="text">
                     </div>
                 </div>
                 <div class="row" role="row">
                     <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" role="separator">
                         <label>UF</label>
-                        <input class="form-data" name="" ng-model="budget.graduation.address.state" required type="text">
+                        <input class="form-data" name="" ng-model="orcamento.formatura.endereco.estado" required type="text">
                     </div>
                     <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10" role="separator">
                         <label>Cidade</label>
-                        <input class="form-data" name="" ng-model="budget.graduation.address.city" required type="text">
+                        <input class="form-data" name="" ng-model="orcamento.formatura.endereco.cidade" required type="text">
                     </div>
                 </div>
                 <div class="row" role="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <label>País</label>
-                        <input class="form-data" name="" ng-model="budget.graduation.address.country" required type="text">
+                        <input class="form-data" name="" ng-model="orcamento.formatura.endereco.pais" required type="text">
                     </div>
                 </div>
                 <div class="row" role="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <a class="btn-derer btn-sm float-right" ng-click="tab = 3" ng-show="budget._id == null">Próximo&nbsp;<i class="icon-right-circled"></i></a>
+                        <a class="btn-derer btn-sm float-right" ng-click="tab = 3" ng-show="orcamento._id == null">Próximo&nbsp;<i class="icon-right-circled"></i></a>
                     </div>
                 </div>
             </section>
@@ -123,12 +123,12 @@
             <section class="form-body">
                 <div class="row" role="row">
                     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                        <input class="form-data" id="cost-name" placeholder="Descrição" type="text">
+                        <input class="form-data" id="custo-descricao" placeholder="Descrição" type="text">
                     </div>
                     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                        <div class="form-data-group">
-                            <input class="form-data" id="cost-value" placeholder="Valor" type="text">
-                            <span class="form-data-group-btn"><button class="btn-default btn-sm" ng-click="spliceCosts();" type="button"><i class="icon-plus"></i></button>
+                        <div class="form-data-group" style="margin-top: 1rem;">
+                            <input class="form-data" id="custo-valor" placeholder="Valor" type="text">
+                            <span class="form-data-group-btn"><button class="btn-default btn-sm" ng-click="spliceCustos();" type="button"><i class="icon-plus"></i></button>
                         </div>
                     </div>
                 </div>
@@ -142,11 +142,11 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="cost in budget.costs">
-                        <td>{{cost.name}}</td>
-                        <td>{{cost.value}}</td>
+                    <tr ng-repeat="custo in orcamento.custos">
+                        <td>{{custo.descricao}}</td>
+                        <td>{{custo.valor}}</td>
                         <td style="text-align: center; width: 80px;">
-                            <button class="btn-derer btn-xs" ng-click="spliceCosts(cost.name);" type="button"><i class="icon-trash"></i>&nbsp;Deletar</button>
+                            <button class="btn-derer btn-xs" ng-click="spliceCustos(custo.descricao);" type="button"><i class="icon-trash"></i>&nbsp;Deletar</button>
                         </td>
                     </tr>
                 </tbody>
@@ -154,7 +154,7 @@
             <section class="form-body">
                 <div class="row" role="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <a class="btn-derer btn-sm float-right" ng-click="tab = 4" ng-show="budget._id == null">Próximo&nbsp;<i class="icon-right-circled"></i></a>
+                        <a class="btn-derer btn-sm float-right" ng-click="tab = 4" ng-show="orcamento._id == null">Próximo&nbsp;<i class="icon-right-circled"></i></a>
                     </div>
                 </div>
             </section>
@@ -164,8 +164,8 @@
                 <div class="row" role="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="form-data-group">
-                            <input class="form-data" id="teacher-name" placeholder="Nome" type="text">
-                            <span class="form-data-group-btn"><button class="btn-default btn-sm" ng-click="spliceTeachers();" type="button"><i class="icon-plus"></i></button>
+                            <input class="form-data" id="professor-nome" placeholder="Nome" type="text">
+                            <span class="form-data-group-btn"><button class="btn-default btn-sm" ng-click="spliceProfessores();" type="button"><i class="icon-plus"></i></button>
                         </div>
                     </div>
                 </div>
@@ -178,10 +178,10 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="teacher in budget.teachers">
-                        <td>{{teacher.name}}</td>
+                    <tr ng-repeat="professor in orcamento.professores">
+                        <td>{{professor.nome}}</td>
                         <td style="text-align: center; width: 80px;">
-                            <button class="btn-derer btn-xs" ng-click="spliceTeachers(teacher.name);"><i class="icon-trash"></i>&nbsp;Deletar</button>
+                            <button class="btn-derer btn-xs" ng-click="spliceProfessores(professor.nome);"><i class="icon-trash"></i>&nbsp;Deletar</button>
                         </td>
                     </tr>
                 </tbody>
@@ -189,10 +189,10 @@
         </div>
     </section>
 </form>
-<nav class="nav-group nav-group-derer nax-fixed-bottom">
+<nav class="nav-group nav-group-derer nav-fixed-bottom">
     <ul>
-        <li><button form="formbudget" type="submit"><i class="icon-floppy"></i>&nbsp;Salvar</button></li>
-        <li><a href="#/budgets"><i class="icon-search"></i>&nbsp;Pesquisar</a></li>
+        <li><button form="formorcamento" type="submit"><i class="icon-floppy"></i>&nbsp;Salvar</button></li>
+        <li><a href="#/orcamentos"><i class="icon-search"></i>&nbsp;Pesquisar</a></li>
     </ul>
     </ul>
 </nav>

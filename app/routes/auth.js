@@ -1,6 +1,6 @@
 module.exports = function(app) {
     var controller = app.controllers.auth;
     
-    app.post('/autentication', controller.autentication);
+    app.post('/autenticacao', controller.autentication);
     app.use('/*', controller.checkToken);  
 };

@@ -1,14 +1,14 @@
 var mongoose = require('mongoose');
 
 module.exports = function () {
-    var user = mongoose.Schema({
-        name : {
+    var usuario = mongoose.Schema({
+        nome : {
             maxlength: 60,
             required : true,
             type: String,
             uppercase : true
         },
-        login : {
+        usuario : {
             index : {
                 unique : true
             },
@@ -17,22 +17,22 @@ module.exports = function () {
             type: String,
             uppercase : true
         },
-        password : {
+        senha : {
             minlength: 8,
             maxlength: 8,
             required : true,
             type: String,
             uppercase : true
         },
-        datecreate : {
+        datacreate : {
             default : new Date(),
             type : String
         },
-        dateupdate : {
+        dataupdate : {
             default : new Date(),
             type : String
         }
     });
     
-    return mongoose.model('user', user, 'user');
+    return mongoose.model('usuario', usuario, 'usuario');
 };

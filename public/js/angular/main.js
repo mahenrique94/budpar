@@ -1,25 +1,25 @@
 angular.module('budpar', ['ngAnimate', 'ngResource', 'ngRoute']).config(function($routeProvider, $httpProvider) {
     $httpProvider.interceptors.push('TokenInterceptor');
     
-    $routeProvider.when('/budgets', {
-        templateUrl : 'partials/budget/list.html',
-        controller : 'BudgetController'
+    $routeProvider.when('/orcamentos', {
+        templateUrl : 'partials/orcamento/lista.html',
+        controller : 'OrcamentoController'
     });
    
-    $routeProvider.when('/budget', {
-       templateUrl : 'partials/budget/form.html',
-       controller : 'BudgetController' 
+    $routeProvider.when('/orcamento', {
+       templateUrl : 'partials/orcamento/formulario.html',
+       controller : 'OrcamentoController' 
     });
    
-    $routeProvider.when('/budget/:budgetId', {
-       templateUrl : 'partials/budget/form.html',
-       controller : 'BudgetController' 
+    $routeProvider.when('/orcamento/:orcamentoId', {
+       templateUrl : 'partials/orcamento/formulario.html',
+       controller : 'OrcamentoController' 
     });
     
     $routeProvider.when('/login', {
-       templateUrl : 'partials/login/form.html',
+       templateUrl : 'partials/login/formulario.html',
        controller : 'LoginController' 
     });
    
-    $routeProvider.otherwise({redirectTo : '/budgets'});
+    $routeProvider.otherwise({redirectTo : '/orcamentos'});
 });

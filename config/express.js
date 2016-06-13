@@ -6,8 +6,6 @@ var helmet = require('helmet');
 module.exports = function() {
     var app = express();
     
-    // app.set('view engine', 'ejs');
-    // app.set('views', './app/views');
     app.set('secret', 'chavesmaneiro');
     
     app.use(express.static('./public'));

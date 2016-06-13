@@ -1,16 +1,16 @@
--- USER
-db.user.insert({
-   name : "MATHEUS HENRIQUE",
-   login : "MAHENRIQUE94",
-   password : "MAHMAH10",
-   datecreate : new Date(),
-   dateupdate : new Date() 
+-- USUARIO
+db.usuario.insert({
+   nome : "MATHEUS HENRIQUE",
+   usuario : "MAHENRIQUE94",
+   senha : "MAHMAH10",
+   datacreate : new Date(),
+   dataupdate : new Date() 
 });
 
-db.user.insert({
-   name : "ADS UNOPAR 2016",
-   login : "ADSUNOPAR",
-   password : "UNOPAR2016",
-   datecreate : new Date(),
-   dateupdate : new Date() 
+db.usuario.insert({
+   nome : "ADS UNOPAR 2016",
+   usuario : "ADSUNOPAR",
+   senha : "UNOPAR2016",
+   datacreate : new Date(),
+   dataupdate : new Date() 
 });

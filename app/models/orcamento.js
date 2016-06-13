@@ -1,59 +1,59 @@
 var mongoose = require('mongoose');
 
 module.exports = function() {
-    var budget = mongoose.Schema({
-        degree : {
-            companyname : {
+    var orcamento = mongoose.Schema({
+        colacao : {
+            empresa : {
                 maxlength : 60,
                 required : true,
                 type : String,
                 uppercase : true
             },
-            address : {
-                street : {
+            endereco : {
+                rua : {
                     maxlength : 60,
                     required : true,
                     type : String,
                     uppercase : true
                 },
-                number : {
+                numero : {
                     maxlength : 10,
                     required : true,
                     type : String,
                     uppercase : true
                 },
-                zipcode : {
+                cep : {
                     match : /[0-9]{5}-[0-9]{3}/,
                     maxlength : 9,
                     required : true,
                     type : String
                 },
-                complement : {
+                complemento : {
                     maxlength : 30,
                     required : false,
                     type : String,
                     uppercase : true
                 },
-                district : {
+                bairro : {
                     maxlength : 60,
                     required : true,
                     type : String,
                     uppercase : true
                 },
-                city : {
+                cidade : {
                     maxlength : 60,
                     required : true,
                     type : String,
                     uppercase : true
                 },
-                state : {
+                estado : {
                     maxlength : 2,
                     minlength : 2,
                     required : true,
                     type : String,
                     uppercase : true
                 },
-                country : {
+                pais : {
                     maxlength : 60,
                     default : 'BRASIL',
                     required : true,
@@ -62,58 +62,58 @@ module.exports = function() {
                 }
             }
         },
-        graduation : {
-            companyname : {
+        formatura : {
+            empresa : {
                 maxlength : 60,
                 required : true,
                 type : String,
                 uppercase : true
             },
-            address : {
-                street : {
+            endereco : {
+                rua : {
                     maxlength : 60,
                     required : true,
                     type : String,
                     uppercase : true
                 },
-                number : {
+                numero : {
                     maxlength : 10,
                     required : true,
                     type : String,
                     uppercase : true
                 },
-                zipcode : {
+                cep : {
                     match : /[0-9]{5}-[0-9]{3}/,
                     maxlength : 9,
                     required : true,
                     type : String
                 },
-                complement : {
+                complemento : {
                     maxlength : 30,
                     required : false,
                     type : String,
                     uppercase : true
                 },
-                district : {
+                bairro : {
                     maxlength : 60,
                     required : true,
                     type : String,
                     uppercase : true
                 },
-                city : {
+                cidade : {
                     maxlength : 60,
                     required : true,
                     type : String,
                     uppercase : true
                 },
-                state : {
+                estado : {
                     maxlength : 2,
                     minlength : 2,
                     required : true,
                     type : String,
                     uppercase : true
                 },
-                country : {
+                pais : {
                     maxlength : 60,
                     default : 'BRASIL',
                     required : true,
@@ -122,36 +122,36 @@ module.exports = function() {
                 }
             }
         },
-        costs : [{
-            name : {
+        custos : [{
+            descricao : {
                 maxlength : 30,
                 required : true,
                 type : String,
                 uppercase : true
             },
-            value : {
+            valor : {
                 min : 0,
                 required : true,
                 type : Number
             }
         }],
-        teachers : [{
-            name : {
+        professores : [{
+            nome : {
                 maxlength : 60,
                 required : true,
                 type : String,
                 uppercase : true
             },
         }],
-        datecreate : {
+        datacreate : {
             default : new Date(),
             type : String
         },
-        dateupdate : {
+        dataupdate : {
             default : new Date(),
             type : String
         }
     });
     
-    return mongoose.model('budget', budget, 'budget');
+    return mongoose.model('orcamento', orcamento, 'orcamento');
 };

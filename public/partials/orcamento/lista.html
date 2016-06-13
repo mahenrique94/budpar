@@ -3,7 +3,7 @@
     <form class="form-modern">
         <div class="row" role="row">
             <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
-                <a class="btn-derer btn-md" href="#/budget"><i class="icon-plus"></i>&nbsp;Novo Orçamento</a>
+                <a class="btn-derer btn-md" href="#/orcamento"><i class="icon-plus"></i>&nbsp;Novo Orçamento</a>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
                 <div class="form-data-group">
@@ -23,13 +23,13 @@
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="budget in budgets | filter : filter">
-                <td>{{budget.degree.companyname}}</td>
-                <td>{{budget.graduation.companyname}}</td>
-                <td>{{getTotal(budget.costs)}}</td>
+            <tr ng-repeat="orcamento in orcamentos | filter : filter">
+                <td>{{orcamento.colacao.empresa}}</td>
+                <td>{{orcamento.formatura.empresa}}</td>
+                <td>{{getTotal(orcamento.custos)}}</td>
                 <td style="text-align: center; width: 150px;">
-                    <a class="btn-lower btn-xs" href="#/budget/{{budget._id}}"><i class="icon-pencil"></i>&nbsp;Editar</a>
-                    <button class="btn-derer btn-xs" ng-click="remover(budget);"><i class="icon-trash"></i>&nbsp;Deletar</button>
+                    <a class="btn-lower btn-xs" href="#/orcamento/{{orcamento._id}}"><i class="icon-pencil"></i>&nbsp;Editar</a>
+                    <button class="btn-derer btn-xs" ng-click="remover(orcamento);"><i class="icon-trash"></i>&nbsp;Deletar</button>
                 </td>
             </tr>
         </tbody>

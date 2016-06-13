@@ -4,20 +4,20 @@ module.exports = function(database) {
     mongoose.connect('mongodb://localhost/' + database);
     
     mongoose.connection.on('connected', function() {
-       console.log('Mongoose! Connected on database: ' + database); 
+       console.log('Mongoose! Conectado no banco de dados: ' + database); 
     });
     
     mongoose.connection.on('disconnected', function() {
-       console.log('Mongoose! Disconnected on database: ' + database); 
+       console.log('Mongoose! Desconectado do banco de dados: ' + database); 
     });
     
     mongoose.connection.on('error', function() {
-       console.log('Mongoose! Error about connecting on database: ' + database); 
+       console.log('Mongoose! Erro ao tentar conectar no banco: ' + database); 
     });
     
     process.on('SIGINIT', function() {
        mongoose.connection.close(function() {
-           console.log('Mongoose! Disconnected by session finish');
+           console.log('Mongoose! Disconectado por fim da aplicação');
            process.exit(0);
        });
     });
